@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+<body>
+    <h3>node.js</h3>
+    <h1>todos</h1>
+    <form class="input" action="/todos" method="POST">
+        <input  type="text" placeholder="add todo here" name="desc">
+    </form>
+    <% users.forEach(user => { %>
+        <form action="/todos/<%=user.id %>/delete" method="GET">
+            <h2><%= user.desc %> <button>x</button></h2>
+        </form>
+        
+        <% }) %>
+</body>
+</html>
